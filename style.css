@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Bailamore FPU';
+    src: url(Bailamore\ FPU.ttf);
+}
+@font-face {
+    font-family: 'Rafigen Demo';;
+    src: url(Rafigen\ Demo.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --var-fondo: #FFFEF3;
+    --var-sombra : #253C62;
+    --var-letrarosada : #F62E8B;
+    --var-letraverde : #28DBC3;
+}
+html{
+    font-size: 13px;
+    scroll-behavior: smooth;
+    background-color: var(--var-fondo);
+}
+label i{
+    font-size: 2.5rem;
+    padding: 10px;
+    width: 100%;
+    z-index: 999;
+    color: black;
+}
+.checkbox{
+    display: none;
+}
+.nav-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transition: 1s;
+    }
+ul{
+    margin-left: -100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    z-index: 999;
+    transition: 1s;
+}
+.checkbox:checked ~ ul{
+    margin-left: 0;
+    }
+ul li{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    padding: 25px;
+    cursor: pointer;
+    color: var(--var-letrarosada);
+    /* border-bottom: 1px bl solid; */
+    transition: 0.5s ease-in-out;
+}
+ul li a:hover{
+    color: black;
+}
+.capa{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    max-width: 1600px;
+    overflow: hidden;
+}
+.primeracapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.primeracapa__logo{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.primeracapa__text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.primeracapa__button{
+    padding: 0px 30px 0px 30px;
+    border: none;
+    font-weight: 300;
+    font-size: 2.5rem;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: var(--var-sombra);
+    color: var(--var-letrarosada);
+    font-family: 'Bailamore FPU';
+}
+.primeracapa__text i{
+    margin-top: 5px;
+    font-size: 2rem;
+    background-color: var(--var-sombra);
+    color: var(--var-fondo);
+    padding: 10px;
+    border-radius: 50%;
+}
+.segundacapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section__content{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.titulo-section{
+    font-size: 2.5rem;
+    font-family: 'Bailamore FPU';
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    color: var(--var-letrarosada);
+    padding: 20px;
+    height: 10%;
+}
+.texto-section{
+    padding: 20px;
+    padding-top: 30px;
+    font-size: 1.8rem;
+    font-family: 'Rafigen Demo';
+    text-align: justify;
+    font-weight: 100;
+    width: fit-content;
+    max-width: 700px;
+}
+.img-section{
+    width: 100%;
+    max-width: 600px;
+    object-position: top;
+    object-fit: cover;
+}
+.fundapc{
+    display: none;
+}
+.funda{
+    max-width: 800px;
+}
+
+
+@media only screen and (min-width : 992px) {
+    html{
+        font-size: 25px;
+    }
+    .capa{
+        overflow: visible;
+    }
+    /* .nav-bar{
+        flex-direction: row;
+    }
+    ul{
+        margin-left: 0;
+        flex-direction: row;
+        height: fit-content;
+    }
+    #labelcheckbox{
+        display: none;
+    }
+    ul li a{
+        padding: 10px;}
+     */
+     .funda{
+        display: none;
+     }
+     .fundapc{
+        display: inline-block;
+     }
+}
