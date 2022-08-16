@@ -22,56 +22,70 @@ html{
     scroll-behavior: smooth;
     background-color: var(--var-fondo);
 }
-label i{
-    font-size: 2.5rem;
-    padding: 10px;
-    width: 100%;
-    z-index: 999;
-    color: black;
-}
-.checkbox{
-    display: none;
-}
+
+
+
+
+
+
+
+
+
+
 .nav-bar{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     position: fixed;
-    transition: 1s;
-    }
-ul{
-    margin-left: -100%;
+    width: 100%;
+}
+.main-menu{
     list-style: none;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
-    z-index: 999;
-    transition: 1s;
-}
-.checkbox:checked ~ ul{
-    margin-left: 0;
-    }
-ul li{
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    cursor: pointer;
-}
-ul li a{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    width: 100%;
-    padding: 25px;
-    cursor: pointer;
-    color: var(--var-letrarosada);
-    /* border-bottom: 1px bl solid; */
+    height: 100vh;
+    background-color: #F62E8B;
     transition: 0.5s ease-in-out;
+    transform: translateY(-100%);
 }
-ul li a:hover{
-    color: black;
+.main-menu--show{
+    transform: translateY(0%);
 }
+#toggle-menu{
+    margin: 20px;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+}
+.logo__container i{
+    font-size: 3rem;
+}
+.main-menu li{
+    height: 20%;
+    display: flex;
+    color: #253C62;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3;
+}
+
+.main-menu li a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .capa{
     width: 100%;
     height: 100vh;
@@ -88,7 +102,7 @@ ul li a:hover{
     justify-content: center;
     align-items: center;
 }
-.primeracapa .limite{
+.primeracapa .wrap{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +139,7 @@ ul li a:hover{
     color: var(--var-letraverde);
 }
 .primeracapa__button{
-    padding: 0px 30px 0px 30px;
+    padding: 5px 40px 5px 40px;
     border: none;
     font-weight: 300;
     font-size: 2.5rem;
@@ -140,7 +154,8 @@ ul li a:hover{
     font-size: 2rem;
     background-color: var(--var-sombra);
     color: var(--var-fondo);
-    padding: 10px;
+    padding: 15px;
+    margin: 20px 30px 0px 30px;
     border-radius: 50%;
 }
 .segundacapa{
@@ -190,6 +205,81 @@ ul li a:hover{
 }
 
 
+
+.cuartacapa{
+    width: 95%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 2000px;
+    min-height: 100vh;
+    padding: 0px 10px 60px 10px;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 5em;
+    flex-wrap: wrap;
+}
+.project__item{
+    cursor: pointer;
+    background: #f2f2f2;
+    padding-bottom: 30px;
+    flex-basis: 350px;
+    width: 100%;
+    min-width: 500px;
+    max-width: 500px;
+    flex-grow: 1;
+    min-height: fit-content;
+    max-height: 800px;
+    height: fit-content;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 30%);
+}
+.project__content{
+    width: 90%;
+    margin: 0 auto;
+}
+.project__picture{
+    width: 100%;
+}
+.project__img{
+    border-radius: 25px;
+    height: 450px;
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.project__img:hover{
+    opacity: 1;
+}
+.project__title{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: 'Bailamore FPU';
+    font-weight: 300;
+    color: var(--var-sombra);
+}
+
+.cuartacapa__button{
+    padding: 5px 40px 5px 40px;
+    border: none;
+    font-weight: 300;
+    font-size: 2.5rem;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: var(--var-sombra);
+    color: var(--var-letrarosada);
+    font-family: 'Bailamore FPU';
+}
+.button__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 @media only screen and (min-width : 992px) {
     html{
         font-size: 25px;
@@ -198,30 +288,15 @@ ul li a:hover{
         overflow: visible;
     }
     .primeracapa__logo{
-    height: 450px;
+        height: 470px;
     }
-
-    /* .nav-bar{
-        flex-direction: row;
-    }
-    ul{
-        margin-left: 0;
-        flex-direction: row;
-        height: fit-content;
-    }
-    #labelcheckbox{
-        display: none;
-    }
-    ul li a{
-        padding: 10px;}
-     */
-     .funda{
+    .funda{
         display: none;
      }
-     .fundapc{
+    .fundapc{
         display: inline-block;
-     }
-     .primeracapa__texto{
+    }
+    .primeracapa__texto{
         display: inline-block;
-     }
+    }
 }

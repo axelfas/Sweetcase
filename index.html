@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" class="css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sweet Case</title>
 </head>
 <body>
     <nav class="nav-bar">
-
-        <input type="checkbox" id="checkbox" class="checkbox">
-        <label for="checkbox" id="labelcheckbox" class="labelcheckbox">
+        <div class="logo__container" id="toggle-menu">
             <i class="fa-solid fa-bars"></i>
-        </label>
-        
-        <ul class="menu">
+        </div>
+        <ul class="main-menu" id="main-menu">
+           
             <li>
                 <a href="#home">Home</a>
             </li>
@@ -33,11 +32,12 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
+        
     </nav>
 
 
 <section class="primeracapa">
-        <div class="limite">
+        <div class="wrap">
             <img src="sweet-case-logo.svg" alt="logo sweet case" class="primeracapa__logo">
         <article class="primeracapa__text">
             <p class="primeracapa__texto">
@@ -79,5 +79,52 @@
         </article>
         
     </section>
+
+    <section class="cuartacapa capa" id="projects">
+        <h2 class="titulo-section">
+            Accesorios
+        </h2>
+        <article class="project__item">
+            <div class="project__content">
+                <div class="project__text">
+                    <h2 class="project__title">Cables de carga</h2>
+                </div>
+                <figure class="project__picture">
+                    <img src="cable.jpg" alt="imagen de proyecto" class="project__img">
+                </figure>
+            </div>
+        </article>
+
+        <article class="project__item">
+             <div class="project__content">
+                 <div class="project__text">
+                     <h2 class="project__title">Silicone case</h2>
+                 </div>
+                 <figure class="project__picture">
+                     <img src="siliconecase.jpg" alt="imagen de proyecto" class="project__img">
+                 </figure>
+             </div>
+         </article>
+
+         <article class="project__item">
+             <div class="project__content">
+                 <div class="project__text">
+                     <h2 class="project__title">Shein Case</h2>
+                 </div>
+                 <figure class="project__picture">
+                     <img src="sheincase.jpg" alt="imagen de proyecto" class="project__img">
+                 </figure>
+             </div>
+         </article>
+
+         <div class="button__container">
+            <button class="cuartacapa__button">
+                Mas informacion
+             </button>
+         </div>
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
